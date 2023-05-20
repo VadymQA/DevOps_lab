@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     dir("lab1") {
-                        sh 'docker build -t lab1-build .'
+                        sh 'docker build --no-cache -t lab1-build .'
                     }
                 }
             }
