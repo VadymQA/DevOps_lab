@@ -1,6 +1,8 @@
 FROM ubuntu
 
-RUN apt-get install -y curl watch
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y curl watch
 
 COPY check_response.sh /check_response.sh
 
