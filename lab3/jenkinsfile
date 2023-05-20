@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+        label 'my-agent'
+    }
+
+    stages {
+        stage('Construct Docker Image') {
+            steps {
+                script {
+                    dir("lab1") {
+                        sh 'docker build -t lab1-build .'
+                    }
+                }
+            }
+        }
+    }
+}
