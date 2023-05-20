@@ -1,9 +1,6 @@
-FROM ubuntu:latest
+FROM alpine:3.17
 
-RUN apt-get clean && \
-    apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y wget gawk
+RUN apk update && apk add bash curl util-linux
 
 COPY check_response.sh /check_response.sh
 
