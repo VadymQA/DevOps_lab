@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN apt-get clean && \
     apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y curl watch
+    apt-get install -y wget gawk
 
 COPY check_response.sh /check_response.sh
 
