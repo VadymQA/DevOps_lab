@@ -1,6 +1,6 @@
 FROM ubuntu
 
-RUN apk add --no-cache curl
+RUN apt-get update && apt-get install -y curl watch
 
 COPY check_response.sh /check_response.sh
 
